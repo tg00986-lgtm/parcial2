@@ -1,0 +1,214 @@
+:root {
+  --background-color: #ffffff; /* Fondo blanco limpio */
+  --text-color: #333333; /* Texto principal oscuro */
+  --accent-color: #000000; /* Negro para botones y acentos */
+  --hover-accent: #222222; /* Negro más suave para hover */
+  --card-bg: #ffffff; /* Fondo de tarjeta blanco */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  --primary: #d63031; /* Un rojo más oscuro y sofisticado para el precio, si quieres */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para un look moderno */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navbar Actualizado */
+.navbar {
+  background-color: var(--background-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea; /* Línea divisoria suave */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.navbar h1 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -1px; /* Look más "brand" */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Contenedor Principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Home Actualizado: Look de la imagen de referencia */
+.hero {
+  text-align: center;
+  padding: 8rem 2rem; /* Más espacio */
+  background-color: #f7f7f7; /* Un fondo gris casi imperceptible */
+  border-radius: 12px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://images.unsplash.com/photo-1596701062351-8a9a4b3f81e6?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+/* Botón Primary Actualizado: Negro */
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50px; /* Bordes redondeados modernos */
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-accent);
+}
+
+/* Menú Grid Actualizado */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden; /* Para que la imagen se adapte */
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Recortar imagen para que encaje */
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eaeaea;
+  padding-top: 1rem;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary); /* Precio resaltado */
+}
+
+/* Botón Add Actualizado: Negro con borde */
+.btn-add {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.btn-add:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Pedido Actualizado */
+.order-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  margin-top: 2rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.total-section {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--accent-color);
+  padding-top: 1.5rem;
+}
